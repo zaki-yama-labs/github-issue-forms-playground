@@ -27,7 +27,7 @@ body:
     validations:
       required: true
   - type: textarea
-    id: textarea-1
+    id: textarea-2
     attributes:
       label: "Textarea (render: bash)"
       description: "render を指定するとコードブロックになり、指定した言語でシンタックスハイライトができる"
