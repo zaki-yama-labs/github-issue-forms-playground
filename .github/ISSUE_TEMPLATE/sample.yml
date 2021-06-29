@@ -1,0 +1,56 @@
+name: Issue Form サンプル
+description: Issue Form のサンプルです（日本語）
+title: "タイトル "
+labels: []
+assignees:
+  - zaki-yama
+body:
+  - type: markdown
+    attributes:
+      value: |
+        `type: markdown` はフォームに表示されますがsubmitされません。<br />
+        issue 登録者向けのメッセージ表示に使えそうです。
+  - type: input
+    id: input-1
+    attributes:
+      label: Input
+      description: Input です
+      placeholder: placeholder も書ける
+    validations:
+      required: false
+  - type: textarea
+    id: textarea-1
+    attributes:
+      label: Textarea
+      description: Textarea です
+      value: "value で初期値を指定できる"
+    validations:
+      required: true
+  - type: textarea
+    id: textarea-1
+    attributes:
+      label: "Textarea (render: bash)"
+      description: "render を指定するとコードブロックになり、指定した言語でシンタックスハイライトができる"
+      render: javascript
+    validations:
+      required: true
+  - type: dropdown
+    id: dropdown-1
+    attributes:
+      label: Dropdown
+      description: What version of our software are you running?
+      options:
+        - 1.0.2 (Default)
+        - 1.0.3 (Edge)
+    validations:
+      required: true
+  - type: checkboxes
+    id: checkboxes-1
+    attributes:
+      label: Checkboxes
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: Foo
+        - label: Bar (This is required)
+          required: true
+        - label: Baz
