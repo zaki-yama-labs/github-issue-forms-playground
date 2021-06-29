@@ -4,7 +4,7 @@ A playground to try GitHub's new feature: [issue forms](https://docs.github.com/
 
 ![issue-forms](issue-forms.png)
 
-Feel free to file issues!
+You can see the live example [here](https://github.com/zaki-yama-labs/github-issue-forms-playground/issues/new/choose).
 
 ## References
 
