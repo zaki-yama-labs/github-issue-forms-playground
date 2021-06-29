@@ -1,6 +1,6 @@
-name: Issue Form サンプル
-description: Issue Form のサンプルです（日本語）
-title: "タイトル "
+name: issue forms example
+description: "Example of GitHub's new feature: issue forms"
+title: "タイトル: "
 labels: []
 assignees:
   - zaki-yama
@@ -8,49 +8,53 @@ body:
   - type: markdown
     attributes:
       value: |
-        `type: markdown` はフォームに表示されますがsubmitされません。<br />
-        issue 登録者向けのメッセージ表示に使えそうです。
+        `type: markdown` はフォームに表示されるがsubmitされない(登録されたissueには記載されない)。
+        issue 登録者向けのメッセージとして使えそう。
   - type: input
     id: input-1
     attributes:
       label: Input
-      description: Input です
+      description: "type: input"
       placeholder: placeholder も書ける
     validations:
       required: false
-  - type: textarea
-    id: textarea-1
-    attributes:
-      label: Textarea
-      description: Textarea です
-      value: "value で初期値を指定できる"
-    validations:
-      required: true
-  - type: textarea
-    id: textarea-2
-    attributes:
-      label: "Textarea (render: bash)"
-      description: "render を指定するとコードブロックになり、指定した言語でシンタックスハイライトができる"
-      render: javascript
-    validations:
-      required: true
   - type: dropdown
     id: dropdown-1
     attributes:
       label: Dropdown
-      description: What version of our software are you running?
+      description: |
+        type: dropdown
+        multiple: true で複数選択可能に
       options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+        - Chrome
+        - Firefox
+        - Safari
+        - Microsoft Edge
+        - IE11
+      multiple: true
     validations:
       required: true
   - type: checkboxes
     id: checkboxes-1
     attributes:
       label: Checkboxes
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      description: "type: checkboxes"
       options:
         - label: Foo
         - label: Bar (This is required)
           required: true
         - label: Baz
+  - type: textarea
+    id: textarea-1
+    attributes:
+      label: Textarea
+      description: Textarea
+      value: "value で初期値を指定できる"
+    validations:
+      required: true
+  - type: textarea
+    id: textarea-2
+    attributes:
+      label: "Textarea (render: javascript)"
+      description: "render: <言語> を指定するとコードブロックになり、指定した言語でシンタックスハイライトができる"
+      render: javascript
